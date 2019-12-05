@@ -1,6 +1,6 @@
 {
     "programmer": "AVR ISP",
     "board": "arduino:avr:uno",
-    "port": "/dev/ttyACM0",
-    "sketch": "src/ReProgLights.ino"
+    "port": "/dev/ttyUSB0",
+    "sketch": "src/RPLight.ino"
 }
