@@ -1,2 +1,2 @@
-# reprog-lights
-Remotely controlled programmable lights
+# RPLight
+Stands for Remotely controlled Programmable Light
