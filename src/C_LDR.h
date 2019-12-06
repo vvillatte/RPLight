@@ -27,7 +27,7 @@ class I_LDR{
     virtual I_LDR* get_ItsILDR(void);
     virtual void set_ItsCLDR(C_LDR* arg);
     virtual int init(int pin);
-    virtual int get_Resistance(void);
+    virtual float get_Voltage(void);
 };
 
 class LDR : public I_LDR{
@@ -42,6 +42,6 @@ class LDR : public I_LDR{
     I_LDR* get_ItsILDR(void);
     void set_ItsCLDR(C_LDR* arg);
     int init(int pin);
-    int get_Resistance(void);
+    float get_Voltage(void);
 };
 #endif

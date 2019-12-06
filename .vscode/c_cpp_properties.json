@@ -15,7 +15,9 @@
                 "${workspaceFolder}/src",
                 "${env:arduino.avr.include.path}/cores/arduino",
                 "${env:arduino.avr.include.path}/variants/standard",
-                "${env:arduino.tools.include.path}/avr/include/avr"
+                "${env:arduino.tools.include.path}/avr/include/avr",
+                "/home/vvillatte/Applications/ArduinoIDE/arduino-1.8.10/hardware/arduino/avr/**",
+                "/home/vvillatte/Applications/ArduinoIDE/arduino-1.8.10/tools/**"
             ],
             "defines": [
                 "USBCON"
@@ -32,11 +34,12 @@
                     "${env:arduino.avr.include.path}/cores/arduino",
                     "${env:arduino.avr.include.path}/variants/standard",
                     "${env:arduino.tools.include.path}/avr/include/avr"
-                    ],
+                ],
                 "limitSymbolsToIncludedHeaders": true
             },
             "forcedInclude": [
-                "${env:arduino.avr.include.path}/cores/arduino/Arduino.h"
+                "${env:arduino.avr.include.path}/cores/arduino/Arduino.h",
+                "/home/vvillatte/Applications/ArduinoIDE/arduino-1.8.10/hardware/arduino/avr/cores/arduino/Arduino.h"
             ]
         }
     ],
