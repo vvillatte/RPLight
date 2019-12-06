@@ -29,7 +29,7 @@ int RPLight::init(void){
 
 int RPLight::run(void){
     static boolean bRunning = false;
-    static int previous_time = 0, time = 0, time_difference = 0;
+    static unsigned long previous_time = 0, time = 0, time_difference = 0;
     if(false == bRunning) {
         Serial.println("RPLights is running");
         previous_time = millis();
@@ -39,6 +39,7 @@ int RPLight::run(void){
     time = millis();
     time_difference = time - previous_time;
     if(1000 < time_difference){
-        Serial.println(p_ItsILDR->get_Resistance());
+        previous_time = time;
+        Serial.println(p_ItsILDR->get_Voltage());
     }
 }

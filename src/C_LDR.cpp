@@ -46,28 +46,9 @@ int LDR::init(int pin){
 }
 
 int LDR::get_RawVoltage(){
-    int raw_Voltage = 0;
-
-    Serial.println("Reading raw voltage");
-
-    raw_Voltage = analogRead(its_Pin);
-    
-    Serial.println(its_Pin);
-    Serial.println(raw_Voltage);
-
-    return raw_Voltage;
+    return analogRead(its_Pin);
 }
 
-int LDR::get_Resistance(){
-    int raw_Voltage = 0;
-    int resistance = 0;
-
-    Serial.println("Reading resistance");
-
-    raw_Voltage = this->get_RawVoltage();
-    resistance = (int) (5.0 * (float) raw_Voltage / 1023.0);
-
-    Serial.println(resistance);
-
-    return resistance;
+float LDR::get_Voltage(){
+    return (5.0 * (float) this->get_RawVoltage() / 1023.0);
 }
